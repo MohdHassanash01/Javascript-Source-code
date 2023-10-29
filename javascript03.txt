@@ -1,0 +1,483 @@
+ Closure 
+
+
+ let score = 4
+function one(){
+    let score = 0
+    console.log(score);
+}
+one()
+// console.log(score);
+
+function two(){
+    let score = 3
+    console.log(score);
+}
+// two()
+
+function three(){
+    
+    console.log(score);
+}
+// three()
+
+
+function outerfunc (){
+    let outervar = 'i am at scope level 1'
+    function innerfunc(){
+        let innerval = 'i am at scope level 2'
+        console.log(outervar);
+        
+    }
+  
+    innerfunc()
+}
+
+outerfunc()
+
+
+
+// const myGlobalvalue = 0
+// function func(){
+//     const val1 =1
+//     console.log(myGlobalvalue);
+
+//     function innerOfFunc(){
+//         const val2 = 2
+//         console.log(myGlobalvalue,val1,val2);
+
+//         function ininerofinnerFunc(){
+//             const val3 = 3
+//             console.log(val3,val2,val1,myGlobalvalue);
+//         }
+//         ininerofinnerFunc()
+//     }
+//     innerOfFunc()
+// }
+
+// func()
+
+
+
+
+// closure 
+
+
+function superfunc(){
+    let outerValue = 'I am outer'
+    function minorFunc(){
+        console.log(outerValue);
+    }
+    minorFunc()
+}
+
+superfunc()
+
+
+
+let pagecount = 0
+const items = [2,4,6,8,10]
+
+items.forEach(function(num){
+    pagecount++
+    console.log(num);
+})
+console.log('page count is :',pagecount);
+
+
+
+//+++++++++++++++++++++++++++++++++++++++++++
+
+
+callback 
+
+
+function call(x,fun){
+    console.log(x*x);
+    fun()
+}
+call(10,function(){
+    console.log('done with callback');
+})
+
+
+// console.log("start");
+// setTimeout(function fu(){
+// console.log("timer done");
+// },3000)
+// console.log('end');
+
+
+
+// promise 
+
+// const promiseOne = new Promise(function(resolve,reject){
+//     // do an async tash 
+//     setTimeout(function(){
+//         console.log("asyn task is complete");
+//         resolve()
+
+//     },1000)
+    
+// })
+
+// promiseOne.then(function(){  // promise consumed
+//     console.log("promise consumed");
+// })
+
+//+++++++++++++++++++++++++++++++++++++++++++++++
+
+// new Promise(function(resolve,reject){
+//     setTimeout(function(){
+// console.log("Async with two");
+// resolve()
+//     },1000)
+// }).then(function(){
+//     console.log("Asunc 2 resolve");
+// })
+
+
+//+++++++++++++++++++++++++++++++++++++++++
+
+
+// const promiseThree = new Promise(function(resolve,reject){
+//     setTimeout(function() {
+//        resolve({username:"chai",email:"chaixemail.com",}) 
+//     },1000 );
+// })
+
+// promiseThree.then(function(user){
+//     console.log(user);
+// })
+
+//+++++++++++++++++++++++++++++++++++++++++++
+
+// const promisefour = new Promise(function(resolve,reject){
+//     setTimeout(function(){
+//         let error = false
+//         if(!error){
+//             resolve({username:'hassan',password:'123'})
+//         } else{
+//             reject('error,something went wrong')
+//         }
+//     },1000)
+// })
+
+// promisefour
+// .then((user)=> {
+//     console.log(user);
+//     return user.username
+// })
+// .then((username)=>{
+// console.log(username);
+// })
+// .catch(function(error){
+//     console.log(error);
+// }).finally(()=> console.log("the finally is executed"))
+
+
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// const promisefive = new Promise(function(resolve,reject){
+//     setTimeout(function(){
+//         let error = true
+//         if (!error){
+//             resolve({username:'javascript',password:'123'})
+            
+//         }else{
+//             reject('error : js went worg')
+//         }
+//     },1000)
+// })
+
+// async function consumedPromise(){
+//    try {
+//     const respone = await promisefive 
+//     console.log(respone);
+//    } catch (error) {
+//     console.log(error);
+//    } 
+// }
+
+// consumedPromise()
+
+
+//++++++++++++++++++++++++++++++++
+
+fetch('https://jsonplaceholder.typicode.com/users')
+.then((respone)=>{
+return respone.json()
+})
+.then((data) => {
+    console.log(data);
+})
+.catch((error) => console.log(error))
+
+
+
+
+//++++++++++++++++++++++++++++++
+
+// set is used to store always unique value 
+
+let emptyset = new Set()
+
+console.log(emptyset.size);
+
+
+let myArray = [1,2,3,4,5]
+let newset = new Set(myArray)
+console.log(newset);
+
+// newset.add(9)
+// console.log(newset);
+
+// console.log(newset.has(9));
+
+// newset.clear()
+// console.log(newset);
+
+
+// set difference ++++++++++++++++++++++
+
+
+
+// map 
+
+
+let map = new Map()
+console.log(map.size);
+
+let arr = [
+    [1,'hassan'],
+    [2,'ashraf'],
+    [3,'Dawood']
+]
+
+arr.map(function(item){
+    return map.set([arrayItem[0],arrayItem[1]])
+})
+
+
+//++++++++++++++++++++++++++++++++++++++++++++++
+
+working of javascript 
+
+// let num = 1
+// one()
+// two()
+// console.log(num);
+// function one(){
+//     let a = 10
+//     console.log(a);
+// }
+// function two(){
+//     let b = 20
+//     console.log(b);
+// }
+
+
+// console.log(addnum(12,13));
+// function addnum(a,b){
+// return a+b
+// }
+
+
+// console.log(multiplyNumbers(12,12));
+// let multiplyNumbers = function(a,b){
+//     return a*b
+// }
+
+
+// console.log(x);
+// console.log(y);
+// console.log(z);
+
+// var x = 'lucknow'
+// let y = 'Mumbai'
+// const z = 'kolkata'
+
+// console.log(x);
+// console.log(y);
+// console.log(z);
+
+console.log(x)
+let x = 'hello world';
+console.log(x);
+
+
+
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+Async await Shariyians codding school
+
+
+// 1)  sync and Async kya hota hai
+
+// sync matlab ek ke baad dusra hoga, jab tak ek command complete naa ho ,dusra shuru nhi hoga
+
+//Async maltab saare kaam ek sath shuru kardo , jiska answer pehle aajaye uska jawaab dedena 
+
+// kaise pata chalta hai ki hum sync code likh rahe ya async ?
+
+
+// setInterval
+// setTimeout
+// Promise
+// fetch
+// axois
+// XMLHttpRequest
+
+// ye sab async me use hota hai 
+
+
+// 2) async js hai kya ?
+
+// kai baar apka final code depend hota hai kisi aur ke server par, is case mein humein nhi pata hota ki answer uske server se kab laut kar aayega, to hum kya nhi kr skte is writting sync code. isse nipatne ke liye hum log async code likh dete hai taaki blocking naa ho and jab bhi answer aaye humara answer ke respect mein chalna waale code chal jaaye
+
+
+// 3)  javascript is not asynchronous ?
+//    yes
+
+
+// jo bhi main stach par hota hai wo output karta hai and jo bhi side stack par hota hai wo behind the scences processing kar sakta hai aur jab uski processing complete ho use main stack mein laa kar chalaya ja sakta hai
+
+// 4) single threading and multi threading 
+
+// javascript is single thread programming language
+
+
+// 5) callback 
+
+// callback humesha ek function hota hai , ye sirf tab chalta hai jab async code ka completion hojata hai 
+
+// async code likhne ke liye
+// setInterval
+// setTimeout
+// Promise
+// fetch
+// axois
+
+// answer chalane ke liye 
+// then catch
+// callbacks
+// async await 
+
+
+// 6) promises
+
+// let ans = new Promise((res,rej)=>{
+//     if (true) {
+//         return res()
+//     }else{
+//         return rej()
+//     }
+// })
+
+// ans.then(function(){
+//     console.log('resolve hogya tha ');
+// })
+// .catch(function(){
+//     console.log('reject hua tha');
+// })
+
+
+// question:- user will ask for a number between 0 se 9 and if the number is below 5 resolve if not reject
+
+
+// let promise = new Promise(function(res,rej){
+//     let num = Math.floor(Math.random()*10)
+//     console.log(num);
+//     if (num<5) {
+//         return res()
+//     } else {
+//         return rej()
+//     }
+// })
+// promise.then(
+//     function(){
+//         console.log('below');
+//     }
+// )
+// .catch(function(){
+//     console.log('above');
+// })
+
+// sabse pahle ghar par aao
+// gate kholo aur gate band karo
+// khana pakao khana khao
+// molible chalaoo
+// sojao kyuki tum thak gye ho
+
+
+// let promisetwo = new Promise(function(res,rej){
+//     return res("sabse pahle ghar par aao")
+// })
+
+// promisetwo.then(function(data){
+//     console.log(data);
+//     return new Promise(function(res,rej){
+//         return res("gate kholo aur gate band karo")
+//     })
+// }).then(function(data){
+// console.log(data);
+// })
+
+let promisetwo = new Promise(function(res,rej){
+    return res("sabse pahle ghar par aao")
+})
+
+let p2 = promisetwo.then(function(data){
+    console.log(data);
+    return new Promise(function(res,rej){
+        return res("gate kholo aur gate band karo")
+    })
+})
+
+let p3 = p2.then(function(data){
+    console.log(data);
+    return new Promise(function(res,rej){
+        return res('khana pakao khana khao')
+    })
+})
+
+p3.then(function(data){
+   console.log(data);
+})
+
+// 7) async await 
+
+// koi bhi esa function jisme aap async code likhege ,kyoki async code hai to app promises ka istemal kar sakte hai,jab uska answer aayega appko then lagana padega ,us then ko lagaane se bachne ke liye , app async await ka istemaal kar sakte hai 
+
+// function abcd(){
+//     fetch('https://randomuser.me/api/')
+//     .then(function(raw){
+//         return raw.json()
+//     })
+//     .then(function(data){
+//         console.log(data);
+//     })
+// }
+// abcd()
+
+
+async function abc(){
+let userdata =   await fetch('https://randomuser.me/api/')
+ let answer = await userdata.json()
+ console.log(answer);
+}
+
+abc()
+
+
+// concurrency and parallelism
+
+// concurency => js mein sync code and async code ek sath process ho raha tha ye hai concurrency
+
+// parallelism => focus jaada karta hai different processors and unke cores par kaam ko chalaana par 
+
+// throttling => kisi code ko control karna of executions 
+
+

@@ -1,0 +1,543 @@
+console.log("hello world")
+
+// console.log(this); // in browser show => window something
+// console.log(this); // in VS code show => empty perenthesis {}
+
+
+// variables and datatype
+
+// PRIMITIVE DATA TYPES
+
+// - number: 2,3,4,5,4.5,65
+// - Srting: "pw skills" or 'pw skills'
+// - boolean: true,false
+// - null
+// - undefine
+
+
+// non primitive datatype
+
+// - Array
+// - Object
+
+
+let studentName = ['hassan','ashraf']
+// console.log(studentName)
+
+
+
+// Assignment operator
+
+let Myname = "hassan"
+// console.log(Myname);
+
+let highScore = 300
+// console.log(highScore);
+
+
+// quiz
+let pwCoursePrize = 200
+// console.log("final amount to be paid ",pwCoursePrize +36);
+
+// Modulus operator
+
+// console.log("Answer 1 is :-", 5 % 2);
+// console.log("Answer 2 is :-", 5 / 2);
+// console.log("Answer 3 is :-", 3**3);
+
+
+// Relational operator
+let hassanHighScore = 200
+let ashrafHighScore = 300
+let dawoodHighScore = "200"
+
+console.log(hassanHighScore <= ashrafHighScore);
+
+console.log(hassanHighScore == dawoodHighScore);
+
+console.log(hassanHighScore === dawoodHighScore);
+
+
+// logical operator
+
+let value1 = true
+let value2 = false
+let value3 = true
+
+console.log("this value is :-",value1 && value2);
+console.log("this value is :-",value1 || value2);
+
+ name1 = "hassan"
+console.log(name1);
+
+
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+// Condition 
+
+let age = 10
+if (age >= 18) {
+    console.log("you are allowed to vote");
+}
+else{
+    console.log("you are not allowed to vote");
+}
+
+
+//ELSE IF Statement
+let signal = "yellow"
+if (signal == "red") {
+    console.log("RED => StOP");
+}
+else if(signal == "yellow"){
+    console.log("yellow => Go slow");
+}
+else{
+    console.log("green => go fast");
+}
+
+//switch case 
+
+let user = "Student"
+
+switch (user) {
+    case "Admin":
+        console.log("he is admin")
+        break;
+    case "Student":
+        console.log("he is student")
+        break ;
+    case "mentor":
+        console.log("he is mentor")
+        break;
+
+    default:
+        console.log("invalid name");
+        break;
+}
+
+
+// LOOP 
+
+let a= 12
+for (let i = 0; i <=a; i++) {
+    console.log(i)
+    
+}
+
+
+
+
+let number = 4
+for (let i = 1; i <= 10; i++) {
+    console.log(`${number} X ${i} =`,number*i);
+    
+}
+
+let i = 0;
+while (i<=10) {
+    console.log(i);
+    i++
+}
+
+let n = 1
+do {
+    console.log(`Index ${n} :hello world `);
+    n++
+} while (n<=5);
+
+// Ternary condition 
+ isLogin = true  //loselytyped language
+isLogin? console.log("home page"):console.log("login_page");
+
+
+// for in loop
+
+let obj = {
+    name :'hassan ashraf',
+    age:21,
+    country:'india',
+    language:"hindi"
+}
+
+for (const key in obj) {
+        // console.log(obj[key]);
+        // console.log(key);
+        // console.log(`${key}  ${obj[key]}`);
+        
+    }
+
+
+    let arr = [1,2,3,4,5,6]
+   let sum = 0
+   for (const i of arr) {
+    sum += i
+//    console.log(i);
+   }
+  
+console.log(sum);
+
+
+///++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+Array 
+
+let a = [1,2,3.45,"hassan","ashraf"]
+console.log(a);
+
+// console.log(a[0]);
+// console.log(a[1]);
+// console.log(a[2]);
+// console.log(a[3]);
+// console.log(a[4]);
+for (let i = 0; i < a.length; i++) {
+    console.log(a[i])
+    
+}
+
+// let arr = new Array(5)
+// console.log(arr);
+
+// let arr1 = new Array("asharf",43,55,76,null,false)
+// console.log(arr1);
+// console.log(arr1.length);
+
+// arr1[4] = true  // update
+// console.log(arr1);
+
+
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+      Array method 
+
+
+// let arr = [1,2,3,4,5]
+// arr.push(6,7)
+// console.log(arr);
+
+// arr.pop()
+// console.log(arr);
+
+
+// let a = arr.shift()
+// console.log(arr);
+// console.log("the a is ",a);
+
+// arr.unshift(8)
+// console.log(arr);
+
+
+
+// let a1 = [1,2,3,4,5]
+// let a2 = [6,7,8,9]
+
+// let a3 = a1.concat(a2)
+// console.log(a3);
+
+// let s = a3.join("")
+// console.log(s);
+
+// a3.reverse()
+// console.log("reverse::",a3);
+
+
+// console.log(a3.indexOf(7));
+
+let arr1 = [12,2,24,46,775]
+console.log("arr1 :", arr1);
+console.log(arr1.slice(2,4));
+
+arr1.splice(2,0,23)
+console.log(arr1);
+
+
+//++++++++++++++++++++++++++++++++++++++++++++++
+
+
+Function 
+
+
+// function without parameter and return
+
+// function print(){
+//     console.log("hello world");
+// }
+// print()
+
+
+// // function with return value 
+
+// function passMessage(){
+//     return "I am happy to learn web dev"
+// }
+
+// const message = passMessage()
+// console.log(message);
+// console.log(message.toUpperCase());
+
+
+// const newMessage = message + " Enroll Today"
+// console.log(newMessage);
+
+
+// function with parameter 
+
+function passMessage(coursename,EnrollMessage = "enroll karo harami"){
+    return "I am happy to learn "+ coursename + "from Pw Skills by Chirag Goyal" + EnrollMessage 
+}
+
+// console.log(passMessage('full stack development',"enroll today"));
+// console.log(passMessage('web development',"enroll tomorrow"));
+// console.log(passMessage('front development'));
+// console.log(passMessage('Backend development'));
+
+
+
+// function with multiple parameter 
+ 
+// function sum(a,b){
+//     return a+b;
+// }
+// let total = sum(2,2)
+// console.log(total);
+
+
+// function with unlimited parameter 
+
+
+function sumOfAllparameter(){
+    let sum = 0
+    for (let i = 0; i < arguments.length; i++) {
+         sum = sum + arguments[i];
+        
+    }
+    return sum
+   
+}
+const total = sumOfAllparameter(1,2,3,4,5,6,7)
+
+console.log(total);
+
+
+
+
+// Arrow function 
+
+
+// const square1 = (x)=> x*x
+// console.log(square1(2));
+// console.log(square1(3));
+
+
+
+// let square2 = (x,y) => x+y
+// console.log(square2(2,3));
+
+
+// let square3 = (x) => {
+//     console.log("input value :-",x);
+//     return x*x
+// }
+// console.log(square3(3));
+
+
+
+
+// Anonymous function 
+
+
+// const getFullName = function (firstname,lastname) {
+//     return firstname+" "+lastname
+// }
+// console.log(getFullName("hassan","ashraf"));
+
+
+
+// immediately invoked function 
+
+(function(x) {
+    console.log(x*x);
+})(5);
+
+
+
+
+// // function expressions 
+
+let sum = function (x,y){
+    return x+y
+}
+
+const total1 = sum;  // sum ko call nhi kiya , sum reference total ko dediya  
+console.log(total1(3,9));
+
+
+
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+Object 
+
+
+let car = {
+    
+    name1:'Honda city',  // properties
+    manufacturing:'hoda',
+    fuelcapacity:'40L',
+Isautomatic:true,
+greetme :function(){  // method aur behaviour
+    console.log("helloo world");
+}
+}
+console.log(car.greetme());
+
+// let car2= {
+    
+//     name1:'sonet',
+//     manufacturing:'kia',
+//     fuelcapacity:'40L',
+//     Isautomatic:false
+
+// }
+
+// console.log(car2);
+// console.log(car2.name1);
+// console.log(car.name1,car.manufacturing,car.fuelcapacity);
+// console.log(car["manufacturing"],car2["name1"]);
+
+// car.color = "red"  // update
+// console.log(car);
+
+
+// second method 
+
+let detail = new Object()
+console.log(detail);  // output is empty objet
+
+detail.name="hassan ashraf";
+detail.age = 21;
+detail.expertise = ["web developer","app developer"]
+detail.postGraduated = false
+detail.country = "india"
+detail.greetme =function(){
+    console.log("helloo world");
+}
+// console.log(detail);
+
+
+
+
+// using constructor method 
+
+
+// function Course(instructor,
+//     title,
+//     description,
+//     language,
+//     duration,
+//     fess,
+//     startdates
+//     ){
+//     this.instructor = instructor;
+//     this.title = title;
+//     this.description = description;
+//     this.language = language;
+//     this.duration = duration;
+//     this.fess = fess;
+//    this.startdates = startdates
+// }
+
+// const javascript = new Course("hassan ashraf","javascript foundation","javascript programming course","english",10,"free","april 2023")
+
+// console.log(javascript);
+
+// const fullStackcourse = new Course("hassan ashraf",
+// "mern foundation",
+// "web developer course",
+// "english",
+// 10,"free",
+// "sept 2023")
+// console.log(fullStackcourse);
+
+
+
+// delete data 
+
+// delete detail.age;
+// console.log(detail);
+
+// update 
+
+// detail.postGraduated = null
+// console.log(detail);
+
+
+
+// MEthod of object
+
+
+// console.log(Object.keys(detail));
+// console.log(Object.values(detail));
+
+// Object.freeze(detail)
+// detail.country = "india";
+// console.log(detail);
+
+
+// Object.freeze(detail)
+// detail.postGraduated = true
+// console.log(detail);
+
+
+// Object.seal(detail)
+// detail.country = "london"
+// console.log(detail);
+
+// for (let keys  in detail){
+//     console.log(detail[keys]);
+// }
+
+
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+object Method 
+
+
+
+let emp = {
+    id: 101,
+    name: "hassan",
+    age:24
+
+}
+
+// let keys = Object.keys(emp)
+// console.log(keys);
+
+// let values = Object.values(emp)
+// console.log(values);
+
+let entries = Object.entries(emp)
+console.log(entries)
+
+// emp.id = 122
+// console.log(emp);
+
+// Object.freeze(emp) // we cannot update and change any keys and vslues
+// console.log(emp);
+
+// Object.seal(emp)  // only update allowed
+// emp.name = "ashraf"
+// console.log(emp); 
+
+let obj = Object.assign({x:"lol"})
+console.log(obj);
+
+
+
